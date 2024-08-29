@@ -13,7 +13,7 @@ namespace TCCMS.Infrastructure.Persistance
         {
             var query = inputQuery;
 
-            if (specs != null) {
+            if (specs.Criteria != null) {
                 query = query.Where(specs.Criteria);
             }
 

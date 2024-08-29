@@ -38,7 +38,7 @@ namespace TCCMS.Infrastructure.Repositories
 
         private IQueryable<T> ApplySpecification(ISpecification<T> specs)
         {
-            return SpecificationEvaulator<T>.GetQuery(_appContext.Set<T>(), specs);
+            return SpecificationEvaulator<T>.GetQuery(_appContext.Set<T>().AsQueryable(), specs);
         }
 
 
